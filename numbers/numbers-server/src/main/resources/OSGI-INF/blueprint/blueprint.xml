@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+
+    <service id="numbers" auto-export="all-classes" >
+        <!--This is neat shortcut to create the bean (object) that implements the service.-->
+        <bean class="com.cramer.project.numbers.server.Numbers"/>
+    </service>
+
+</blueprint>

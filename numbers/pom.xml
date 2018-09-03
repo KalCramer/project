@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>project</artifactId>
+        <groupId>com.cramer.project</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.cramer.project.numbers</groupId>
+    <artifactId>numbers</artifactId>
+    <packaging>pom</packaging>
+    <name>Cramer :: Projects :: Numbers</name>
+
+    <modules>
+        <module>numbers-api</module>
+        <module>numbers-client</module>
+        <module>numbers-server</module>
+    </modules>
+
+</project>
