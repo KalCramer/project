@@ -12,4 +12,12 @@ public interface NumbersAPI {
 
     List<Integer> getPrimeFactorization(int number);
 
+    int nthPrime(int n);
+
+    boolean isPrime(int n);
+
+    double costOfTiling(double width, double height, double tileCost);
+
+    double mortgageMonthlyPayments(double morgage, double rate, int years);
+
 }

@@ -57,8 +57,39 @@ public class NumbersTest {
         assertThat(numbers.getPrimeFactorization(8), containsInAnyOrder(2, 2, 2));
         assertThat(numbers.getPrimeFactorization(7), containsInAnyOrder(7));
         assertThat(numbers.getPrimeFactorization(15), containsInAnyOrder(3, 5));
+    }
 
+    @Test
+    public void isPrimeTest() {
+        assertThat(numbers.isPrime(8), is(false));
+        assertThat(numbers.isPrime(7), is(true));
+        assertThat(numbers.isPrime(15), is(false));
+        assertThat(numbers.isPrime(2), is(true));
+        assertThat(numbers.isPrime(17), is(true));
+    }
+
+    @Test
+    public void nthPrimeTest() {
+        assertThat(numbers.nthPrime(1), is(2));
+        assertThat(numbers.nthPrime(2), is(3));
+        assertThat(numbers.nthPrime(3), is(5));
+        assertThat(numbers.nthPrime(4), is(7));
+        assertThat(numbers.nthPrime(5), is(11));
+        assertThat(numbers.nthPrime(6), is(13));
+        assertThat(numbers.nthPrime(1000), is(7919));
 
     }
 
+    @Test
+    public void costOfTilingTest() {
+        assertThat(numbers.costOfTiling(10, 12, 5), is(600.00));
+        assertThat(numbers.costOfTiling(5.6, 13.4, 4.25), is(318.92));
+        assertThat(numbers.costOfTiling(23.5, 18.4, 7.75), is(3351.10));
+    }
+
+    @Test
+    public void mortgageMonthlyPaymentsTest() {
+        assertThat(numbers.mortgageMonthlyPayments(200000, 0.0525, 30), is(1104.41));
+        assertThat(numbers.mortgageMonthlyPayments(250000, 0.0625, 20), is(1827.32));
+    }
 }

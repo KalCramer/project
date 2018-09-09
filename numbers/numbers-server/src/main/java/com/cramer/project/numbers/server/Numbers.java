@@ -57,5 +57,39 @@ public class Numbers implements NumbersAPI {
         return list;
     }
 
+    public int nthPrime(int n) {
+        int candidate, count;
+        for (candidate = 2, count = 0; count < n; ++candidate) {
+            if (isPrime(candidate)) {
+                ++count;
+            }
+        }
+        return candidate - 1;
+    }
+
+    // https://stackoverflow.com/questions/9625663/calculating-and-printing-the-nth-prime-number
+    public boolean isPrime(int n) {
+        if (n % 2 == 0) return n == 2;
+        if (n % 3 == 0) return n == 3;
+        int step = 4, m = (int) Math.sqrt(n) + 1;
+        for (int i = 5; i < m; step = 6 - step, i += step) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private double roundMoney(double x) {
+        return Math.round(x * 100.0) / 100.0;
+    }
+
+    public double costOfTiling(double width, double height, double tileCost) {
+        return roundMoney(width * height * tileCost);
+    }
+
+    public double mortgageMonthlyPayments(double morgage, double rate, int years) {
+        return roundMoney((morgage * rate / 12) / (1 - Math.pow(1 + (rate / 12), -years * 12)));
+    }
 
 }
